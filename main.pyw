@@ -43,7 +43,7 @@ class MySerial:
         if port_name is not None:
             self.connect(port_name)
 
-    def connect(self, port_name, _n=5):
+    def connect(self, port_name):
         try:
             self.port = serial.Serial(port_name, 9600)
         except serial.SerialException:
@@ -73,7 +73,6 @@ class Gui(QWidget):
         self.init_ui(serial_obj)
 
     def init_ui(self, serial_obj):
-        # self.setGeometry() потом можно использовать его
         self.setFixedSize(WIDTH, HEIGHT)
         for i in range(COUNT):
             LightButton(i, serial_obj, 20 + 50 * i + LAMP_SIZE * i, self)
