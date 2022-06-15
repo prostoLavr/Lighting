@@ -1,0 +1,8 @@
+**/.idea/
+**/.pytest_cache/
+**/.ipynb_checkpoints/
+**/*.h5
+**/*.pt
+**/*.xml
+**/__pycache__/
+venv/
